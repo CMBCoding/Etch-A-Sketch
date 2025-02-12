@@ -4,57 +4,59 @@
     padding: 0;
 }
 
-header {
-    text-align: center;
-    margin: 25px;
-    font-weight: 700;
-    font-size: Xx-large;
+body {
+    background-color: rgb(169, 231, 233);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
 }
 
 h1 {
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: crimson;
 }
 
 #frame-outer {
     display: flex;
     flex-direction: column;
     border: solid 25px crimson;
+    outline: solid 3px black;
     border-radius: 10px;
     margin: 25px;
     text-align: center;
     color: goldenrod;
     font-style: italic;
     text-decoration: underline;
-    height: 400px;
-    width: 650px;
+    height: 600px;
+    width: 620px;
 }
 #frame-inner {
-    border-top: solid 10px crimson;
-    border-bottom: solid 20px crimson;
-    border-right: solid 10px crimson;
-    border-left: solid 10px crimson;
+    border-top: inset 10px crimson;
+    border-bottom: inset 20px crimson;
+    border-right: inset 10px crimson;
+    border-left: inset 10px crimson;
     padding: 25px;
     height: 100%;
     width: 100%;
-    color: crimson;
+    background-color: white;
 }
 
 #wheels {
     display: flex;
+    background-color: crimson;
     flex-direction: row;
-    border: solid 3px black;
+    border: inset 5px crimson;
     justify-content: space-between;
     width: 100%;
-    height: 75px;
+    height: 100px;
+    padding: 5px;
 }
-#wheel-left {
-    border: solid 3px black;
-    border-radius: 100%;
-    height: 70px;
-    width: 70px;
-}
-#wheel-right {
-    border: solid 3px black;
+#wheel-left, #wheel-right {
+    background-color: white;
+    border: inset 1px white;
     border-radius: 100%;
     height: 70px;
     width: 70px;
