@@ -32,7 +32,7 @@ h1 {
     font-style: italic;
     text-decoration: underline;
     height: 620px;
-    width: 800px;
+    width: 900px;
 }
 #frame-inner {
     display: flex;
@@ -42,7 +42,7 @@ h1 {
     border-bottom: inset 20px crimson;
     border-right: inset 10px #880C25;
     border-left: inset 10px crimson;
-    padding: 25px;
+    /*padding: 25px; Toggle to play with the blocks and sizinh*/
     margin: 0;
     height: 100%;
     width: 100%;
