@@ -17,6 +17,7 @@ h1 {
     flex-direction: column;
     justify-content: flex-start;
     background-color: crimson;
+    margin: 0;
 }
 
 #frame-outer {
@@ -30,15 +31,19 @@ h1 {
     color: goldenrod;
     font-style: italic;
     text-decoration: underline;
-    height: 600px;
-    width: 620px;
+    height: 620px;
+    width: 800px;
 }
 #frame-inner {
-    border-top: inset 10px crimson;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    border-top: solid 10px crimson;
     border-bottom: inset 20px crimson;
-    border-right: inset 10px crimson;
+    border-right: inset 10px #880C25;
     border-left: inset 10px crimson;
     padding: 25px;
+    margin: 0;
     height: 100%;
     width: 100%;
     background-color: white;
@@ -49,10 +54,12 @@ h1 {
     background-color: crimson;
     flex-direction: row;
     border: inset 5px crimson;
+    border-right: solid 5px #880C25;
     justify-content: space-between;
     width: 100%;
     height: 100px;
     padding: 5px;
+    margin: 0;
 }
 #wheel-left, #wheel-right {
     background-color: white;
@@ -61,3 +68,10 @@ h1 {
     height: 70px;
     width: 70px;
 }
+
+/* div {
+    border: double 1px black;
+    background-color: greenyellow;
+    height: 30px;
+    width: 30px;
+} */
