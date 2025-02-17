@@ -31,21 +31,22 @@ h1 {
     color: goldenrod;
     font-style: italic;
     text-decoration: underline;
-    height: 620px;
-    width: 900px;
+    height: fit-content;
+    width: fit-content;
 }
 #frame-inner {
     display: flex;
     flex-wrap: wrap;
-    gap: 2px;
+    box-sizing: content-box;
+    /* gap: 2px; */
     border-top: solid 10px crimson;
     border-bottom: inset 20px crimson;
     border-right: inset 10px #880C25;
     border-left: inset 10px crimson;
     /*padding: 25px; Toggle to play with the blocks and sizinh*/
     margin: 0;
-    height: 100%;
-    width: 100%;
+    height: 800px;
+    width: 800px;
     background-color: white;
 }
 

@@ -4,7 +4,9 @@ const block = document.createElement("div");
 /*Created block for sketch grid and stylings*/
 block.style.backgroundColor = "gainsboro";
 block.style.display = "flex";
-block.style.flexBasis = "50px";
+// block.style.flex = "50px";
+block.style.minHeight = "50px";
+block.style.minWidth = "50px";
 // block.style.height = "50px";
 // block.style.width = "50px";
 
