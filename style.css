@@ -39,28 +39,21 @@ h1 {
 #frame-inner {
     display: flex;
     flex-wrap: wrap;
-    box-sizing: content-box;
     flex-direction: row;
+    box-sizing: content-box;
+    /* align-items: stretch; */
+    /* justify-content: center;
+    align-content: flex-start; */
+    /* flex: 1 1 0; */
     border-top: solid 10px #880C25;
     border-bottom: inset 10px crimson;
     border-right: inset 10px #880C25;
     border-left: inset 10px crimson;
     margin: 0;
-    min-height: 800px;
-    min-width: 800px;
+    min-height: 400px;
+    min-width: 400px;
     background-color: white;
 }
-/* 
-@media (height < 800px) {
-    #frame-outer {
-        height: fit-content;
-        width: fit-content;
-    }
-    #frame-inner {
-        min-height: 400px;
-        min-width: 400px;
-    }
-} */
 
 #wheels {
     display: flex;
@@ -89,7 +82,7 @@ h1 {
 
 .block {
     display: flex;
-    flex: 1 1 50px;
+    flex: 1 1 6%;
 }
 
 /* div {
