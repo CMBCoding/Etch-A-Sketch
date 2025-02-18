@@ -41,17 +41,14 @@ h1 {
     flex-wrap: wrap;
     flex-direction: row;
     box-sizing: content-box;
-    /* align-items: stretch; */
-    /* justify-content: center;
-    align-content: flex-start; */
-    /* flex: 1 1 0; */
+    justify-content: center;
     border-top: solid 10px #880C25;
     border-bottom: inset 10px crimson;
     border-right: inset 10px #880C25;
     border-left: inset 10px crimson;
     margin: 0;
-    min-height: 400px;
-    min-width: 400px;
+    height: 400px;
+    width: 400px;
     background-color: white;
 }
 
@@ -79,15 +76,7 @@ h1 {
     background-color: rgba(255, 245, 245, 0.715);
     border: inset 1px lightgray;
 }
-
 .block {
     display: flex;
     flex: 1 1 6%;
 }
-
-/* div {
-    border: double 1px black;
-    background-color: greenyellow;
-    height: 30px;
-    width: 30px;
-} */

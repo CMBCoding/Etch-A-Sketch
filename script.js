@@ -1,13 +1,9 @@
 const frame = document.querySelector("#frame-inner");
 const block = document.createElement("div");
 
-/*Created block for sketch grid and stylings*/
 block.style.backgroundColor = "gainsboro";
-// block.style.display = "flex";
-// block.style.flex = "1 1 50px";
 block.classList.add("block");
 
-// screen.appendChild(block);
 let blocks = block.cloneNode(true);
 blocks.addEventListener("mouseover", () =>
     blocks.style.backgroundColor = "grey"
@@ -29,32 +25,43 @@ leftWheel.addEventListener("click", changeScreen);
 rightWheel.addEventListener("click", clearScreen);
 let size;
 
-//Find way to convert size to a pixel value;
 function changeScreen() {
-    clearScreen();
     area = prompt("Enter a number to generate the area for your new grid");
     let size = Number(area);
-    frame.style.width = size;
-    frame.style.height = size;
-    return frame.style.width, frame.style.height;
-    // for (let i = 0; i < area; i++) {
-    //     drawScreen();
-    // }
+    if (size <= 100) {
+        clearScreen();    
+        drawScreen(size);         
+    } else {
+        alert("Please enter a number between 1 and 100");
+    }
 };
 
-/* Function for removal of nodes from the frame to create a blank frame.
-Removes each firstChild from the frame until there are none left. */
 function clearScreen() {
     while (frame.firstChild) {
         frame.removeChild(frame.firstChild)
     }
 };
 
-//Test for adding blocks. Cut//
-function drawScreen() {
-    const blocks = block.cloneNode(true);
-    frame.appendChild(blocks);
-    blocks.addEventListener("mouseover", () =>
+function drawScreen() {      
+        for (let i = 0; i < area; i++) {
+        const blocks = block.cloneNode(true);
+        frame.appendChild(blocks);
+        blocks.addEventListener("mouseover", () =>
         blocks.style.backgroundColor = "grey"
-    );
+    );}
 }
+
+// let red;
+// let blue;
+// let green;
+
+// function randomColor() {
+//     red = Math.floor(Math.random() * 256);
+//     console.log(red);
+//     green = Math.floor(Math.random() * 256);
+//     console.log(green);
+//     blue = Math.floor(Math.random() * 256);
+//     console.log(blue);
+//     frame.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+    
+// };
