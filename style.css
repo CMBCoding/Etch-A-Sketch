@@ -17,18 +17,22 @@ body {
 h1 {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     background-color: crimson;
-    margin: 0;
+    padding-bottom: 15px;
+    color: goldenrod;
+    text-align: center;
+    text-decoration: underline;
 }
 
 #frame-outer {
+    margin: 10vh;
     display: flex;
     flex-direction: column;
     border: solid 25px crimson;
+    border-top: solid 15px crimson;
     outline: solid 3px black;
     border-radius: 10px;
-    height: 100vh;
+    height: 80vh;
     width: 70vw;
 }
 #frame-inner {
@@ -36,12 +40,13 @@ h1 {
     flex-wrap: wrap;
     flex-direction: column;
     box-sizing: content-box;
-    justify-content: center;
+    /* justify-content: center; */
     border-top: solid 10px #880C25;
     border-bottom: inset 10px crimson;
     border-right: inset 10px #880C25;
     border-left: inset 10px crimson;
     margin: 0;
+    padding: 0%;
     height: 400px;
     background-color: white;
 }
@@ -73,7 +78,7 @@ h1 {
 .block {
     display: flex;
     flex: 1 1 6%;
-    width: 100%;
+    width: 105%;
     height: 6%;
 }
 
@@ -81,6 +86,9 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content:stretch;
+    margin: 0;
+    border: 0;
     height: 100%;
     width: 6%;
 }
