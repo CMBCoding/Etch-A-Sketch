@@ -1,21 +1,41 @@
 const frame = document.querySelector("#frame-inner");
 const block = document.createElement("div");
+const column = document.createElement("div");
 
 block.style.backgroundColor = "gainsboro";
 block.classList.add("block");
 
-let blocks = block.cloneNode(true);
-blocks.addEventListener("mouseover", () =>
-    blocks.style.backgroundColor = "grey"
-);
+/* Test for adding colums to then add in the blocks */
+column.classList.add("column");
+column.style.backgroundColor = "gainsboro";
 
-for (let i = 0; i < 256; i++) {
-    const blocks = block.cloneNode(true);
-    frame.appendChild(blocks);
-    blocks.addEventListener("mouseover", () =>
+for (let i = 0; i < 16; i++) {
+    let columns = column.cloneNode(true);
+    frame.appendChild(columns);
+    for (let i = 0; i < 16; i++) {
+        let blocks = block.cloneNode(true);
+        columns.appendChild(blocks);
+        blocks.addEventListener("mouseover", () =>
         blocks.style.backgroundColor = "grey"
-    );
-}
+        );
+    }
+};
+
+/* End of test code */
+
+
+// let blocks = block.cloneNode(true);
+// blocks.addEventListener("mouseover", () =>
+// blocks.style.backgroundColor = "grey"
+// );
+
+// for (let i = 0; i < 256; i++) {
+//     const blocks = block.cloneNode(true);
+//     frame.appendChild(blocks);
+//     blocks.addEventListener("mouseover", () =>
+//         blocks.style.backgroundColor = "grey"
+//     );
+// }
 
 const leftWheel = document.querySelector("#wheel-left");
 const rightWheel = document.querySelector("#wheel-right");
