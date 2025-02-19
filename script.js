@@ -42,19 +42,46 @@ const rightWheel = document.querySelector("#wheel-right");
 
 
 leftWheel.addEventListener("click", changeScreen);
-rightWheel.addEventListener("click", clearScreen);
-let size;
 
 function changeScreen() {
-    area = prompt("Enter a number to generate the area for your new grid");
-    let size = Number(area);
-    if (size <= 100) {
-        clearScreen();    
-        drawScreen(size);         
+    gridX = prompt("Enter a number from 1 to 100 for the width of your new grid.");
+    gridY = prompt("Enter a number from 1 to 100 for the height of your new grid.");
+    if (gridY <= 100 && gridX <= 100) {
+        console.log(gridY);
+        console.log(gridX);
+        let gridArea = gridY * gridX;
+        console.log(gridArea);
+        clearScreen();
+        drawGrid(gridX, gridY);
     } else {
-        alert("Please enter a number between 1 and 100");
+        alert("Please enter a number between 1 and 100 for your grid length and width.")
     }
 };
+
+function drawGrid() {
+    let gridArea = gridY * gridX;
+    for (i = 0; i < gridArea; i++) {
+        let blocks = block.cloneNode(true);
+        frame.appendChild(blocks);
+        blocks.addEventListener("mouseover", () =>
+        blocks.style.backgroundColor = "grey");
+    }
+}
+
+// function drawColumns() {
+//     for (let i = 0; i < gridX; i++) {
+//         let columns = column.cloneNode(true);
+//         // columns.style.width = (100 / gridX);
+//         frame.appendChild(columns);
+//     }
+// };
+
+// function drawBlocks() {
+//     for (let i = 0; i < gridY; i ++) {
+//         let blocks = block.cloneNode(true);
+//         columns.appendChild(blocks);
+//     }
+// }
 
 function clearScreen() {
     while (frame.firstChild) {
@@ -62,14 +89,29 @@ function clearScreen() {
     }
 };
 
-function drawScreen() {      
+function drawScreen() {
+    for (let i = 0; i < 16; i++) {
+        let columns = column.cloneNode(true);
+        frame.appendChild(columns);
+        if ((area % 2) === 0 ) {}
         for (let i = 0; i < area; i++) {
         const blocks = block.cloneNode(true);
-        frame.appendChild(blocks);
+        column.appendChild(blocks);
         blocks.addEventListener("mouseover", () =>
-        blocks.style.backgroundColor = "grey"
-    );}
+        blocks.style.backgroundColor = "grey");
+        }
+    };
 }
+
+//Old drawScreen
+// function drawScreen() {      
+//         for (let i = 0; i < area; i++) {
+//         const blocks = block.cloneNode(true);
+//         frame.appendChild(blocks);
+//         blocks.addEventListener("mouseover", () =>
+//         blocks.style.backgroundColor = "grey"
+//     );}
+// }
 
 // let red;
 // let blue;
