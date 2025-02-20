@@ -2,6 +2,9 @@ const frame = document.querySelector("#frame-inner");
 const block = document.createElement("div");
 const column = document.createElement("div");
 
+const frameWidth = frame.style.minWidth = "500px";
+const frameHeight = frame.style.minHeight = "500px";
+
 block.classList.add("block");
 block.style.backgroundColor = "gainsboro";
 column.classList.add("column");
@@ -40,6 +43,8 @@ function drawGrid() {
         let columns = column.cloneNode(true);
         frame.appendChild(columns);
         for (let i = 0; i < grid; i++) {
+            console.log(block.style.height);
+            console.log(block.style.width);
             let blocks = block.cloneNode(true);
             columns.appendChild(blocks);
             blocks.addEventListener("mouseover", () =>
