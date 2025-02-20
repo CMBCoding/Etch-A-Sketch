@@ -2,10 +2,8 @@ const frame = document.querySelector("#frame-inner");
 const block = document.createElement("div");
 const column = document.createElement("div");
 
-block.style.backgroundColor = "gainsboro";
 block.classList.add("block");
-
-/* Test for adding colums to then add in the blocks */
+block.style.backgroundColor = "gainsboro";
 column.classList.add("column");
 column.style.backgroundColor = "gainsboro";
 
@@ -20,22 +18,6 @@ for (let i = 0; i < 16; i++) {
         );
     }
 };
-
-/* End of test code */
-
-
-// let blocks = block.cloneNode(true);
-// blocks.addEventListener("mouseover", () =>
-// blocks.style.backgroundColor = "grey"
-// );
-
-// for (let i = 0; i < 256; i++) {
-//     const blocks = block.cloneNode(true);
-//     frame.appendChild(blocks);
-//     blocks.addEventListener("mouseover", () =>
-//         blocks.style.backgroundColor = "grey"
-//     );
-// }
 
 const leftWheel = document.querySelector("#wheel-left");
 const rightWheel = document.querySelector("#wheel-right");
@@ -59,14 +41,29 @@ function changeScreen() {
 };
 
 function drawGrid() {
-    let gridArea = gridY * gridX;
-    for (i = 0; i < gridArea; i++) {
+    // let gridArea = gridY * gridX;
+    drawColumns(gridY);
+    // for (i = 0; i < gridArea; i++) {
+    //     let blocks = block.cloneNode(true);
+    //     frame.appendChild(blocks);
+    //     blocks.addEventListener("mouseover", () =>
+    //     blocks.style.backgroundColor = "grey");
+    // }
+};
+
+function drawColumns() {
+    for (let i = 0; i < gridX; i++) {
+        let columns = column.cloneNode(true);
         let blocks = block.cloneNode(true);
-        frame.appendChild(blocks);
-        blocks.addEventListener("mouseover", () =>
-        blocks.style.backgroundColor = "grey");
+        // let columnsArray = Array.from(columns);
+        frame.appendChild(columns);
+        columns.addEventListener("mouseover", () => 
+        columns.style.backgroundColor = "gray")
+        // columnsArray.forEach(columns => { 
+        //     columns.appendChild(blocks/gridY);
+        // });
     }
-}
+};
 
 // function drawColumns() {
 //     for (let i = 0; i < gridX; i++) {
@@ -89,19 +86,19 @@ function clearScreen() {
     }
 };
 
-function drawScreen() {
-    for (let i = 0; i < 16; i++) {
-        let columns = column.cloneNode(true);
-        frame.appendChild(columns);
-        if ((area % 2) === 0 ) {}
-        for (let i = 0; i < area; i++) {
-        const blocks = block.cloneNode(true);
-        column.appendChild(blocks);
-        blocks.addEventListener("mouseover", () =>
-        blocks.style.backgroundColor = "grey");
-        }
-    };
-}
+// function drawScreen() {
+//     for (let i = 0; i < 16; i++) {
+//         let columns = column.cloneNode(true);
+//         frame.appendChild(columns);
+//         if ((area % 2) === 0 ) {}
+//         for (let i = 0; i < area; i++) {
+//         const blocks = block.cloneNode(true);
+//         column.appendChild(blocks);
+//         blocks.addEventListener("mouseover", () =>
+//         blocks.style.backgroundColor = "grey");
+//         }
+//     };
+// }
 
 //Old drawScreen
 // function drawScreen() {      
