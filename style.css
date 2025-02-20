@@ -5,7 +5,6 @@
 }
 
 body {
-    background: rgb(98,124,176);
     background: linear-gradient(158deg, rgba(98,124,176,1) 35%, 
     rgba(23,209,255,1) 100%);
     display: flex;
@@ -21,7 +20,7 @@ h1 {
     padding-bottom: 15px;
     color: whitesmoke;
     text-align: center;
-    text-decoration: underline;
+    font-style: italic;
 }
 
 #frame-outer {
@@ -35,7 +34,7 @@ h1 {
     border-top: solid 15px crimson;
     outline: solid 3px black;
     border-radius: 10px;
-    height: 80vh;
+    height: 36vh;
     width: 20vw;
     min-height: fit-content;
     min-width: fit-content;
@@ -45,15 +44,12 @@ h1 {
     flex-wrap: wrap;
     flex-direction: column;
     box-sizing: content-box;
-    /* justify-content: center; */
     border-top: solid 10px #9d132f;
     border-bottom: inset 10px crimson;
     border-right: inset 10px #880C25;
     border-left: inset 10px crimson;
     margin: 0;
     padding: 0%;
-    /* min-height: 600px;
-    min-width: 600px; */
     background-color: white;
 }
 
@@ -66,7 +62,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 11vh;
+    height: 5vh;
     min-height: fit-content;
     padding: 10px;
     margin: 0;
@@ -78,6 +74,9 @@ h1 {
     height: 6vh;
     min-height: 70px;
     min-width: 70px;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
 }
 
 #wheel-left:hover, #wheel-right:hover {
@@ -87,16 +86,14 @@ h1 {
 .block {
     display: flex;
     flex: 1 1 0;
-    /* width: 105%;
-    height: 6%; */
 }
 
 .column {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content:stretch;
+    justify-content: stretch;
+    flex: 0 1 100%;
     margin: 0;
     border: 0;
-    height: 100%;
 }

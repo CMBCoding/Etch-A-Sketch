@@ -25,6 +25,7 @@ for (let i = 0; i < 16; i++) {
 const leftWheel = document.querySelector("#wheel-left");
 const rightWheel = document.querySelector("#wheel-right");
 leftWheel.addEventListener("click", changeScreen);
+rightWheel.addEventListener("click", resetScreen)
 
 function changeScreen() {
     grid = prompt("Enter a number from 1 to 100 for the area of your new grid.");
@@ -32,19 +33,32 @@ function changeScreen() {
         clearScreen();
         drawGrid(grid);
     } else {
-        alert("Please enter a number from 1 to 100 for the area of your new grid.")
+        alert("Please enter a number from 1 to 100 for the area of your new grid.");
+        resetScreen();
     }
 };
 
+function resetScreen() {
+    clearScreen();
+    for (let i = 0; i < 16; i++) {
+        let columns = column.cloneNode(true);
+        frame.appendChild(columns);
+        for (let i = 0; i < 16; i++) {
+            let blocks = block.cloneNode(true);
+            columns.appendChild(blocks);
+            blocks.addEventListener("mouseover", () =>
+            blocks.style.backgroundColor = "grey"
+            );
+        }
+    };    
+}
+
 function drawGrid() {
     let gridArea = grid * grid;
-    console.log(gridArea);
-    for (let i = 0; i < (gridArea / 2); i++) {
+    for (let i = 0; i < (gridArea / grid); i++) {
         let columns = column.cloneNode(true);
         frame.appendChild(columns);
         for (let i = 0; i < grid; i++) {
-            console.log(block.style.height);
-            console.log(block.style.width);
             let blocks = block.cloneNode(true);
             columns.appendChild(blocks);
             blocks.addEventListener("mouseover", () =>
